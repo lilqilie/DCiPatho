@@ -38,7 +38,7 @@ You can predict pathogenic potentials with the built-in models out of the box, f
 
 ## Basic demo for training on mini-RefSeq dataset
 
-You can set the parameter of training and model in DCiPatho_config.py file. Then you can train the DCiPatho model and evaluate it on mini-RefSeq dataset by running:
+You can set the parameter of training and model in `DCiPatho_config.py` file. Then you can train the DCiPatho model and evaluate it on mini-RefSeq dataset by running:
 
 ``````python
 `python DCiPatho_main.py`
