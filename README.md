@@ -1,6 +1,6 @@
 # DCiPatho
 
-DCiPatho is a tool based on the k-mer frequence data for fast classification of pathogens from sequencing data.
+DCiPatho is a tool for rapid identification of pathogens from sequencing data. This tool is based on the k-mer frequence data.
 
 ## Introduction
 
@@ -17,21 +17,30 @@ pandas~=1.1.5
 scikit-learn~=0.24.2
 ```
 
-## Examples
+## **toy dataset**
 
-Set parameters in DCiPatho_config.py file.
+You can download the k-mer frequencies of mini-RefSeq dataset(toy_dataset_for_DCiPatho.zip) in the link below. Then unzip them to example_data file.
 
-Use python DCiPatho.py to train and evaluate model.
-
-**Input data**:
+Link：https://drive.google.com/drive/folders/1RsyVqXKy4uyaldfbdmZsRApRc5lcb3wq
 
 
-You can download the k-mer frequencies of MAGs dataset in the link below, then unzip them to example_data file.
+## Basic demo for prediction
 
-Link：https://pan.baidu.com/s/1cVXoRre9eDuslTNVqD-EAQ 
-code：dci1
+You can predict pathogenic potentials with the built-in models out of the box, first, change `pred_input_path` in `DCiPatho_config.py` to the directory containing the .fasta file you need to classify, and set `pred_output_path` to the directory where the prediction results need to be output, then:
 
-**Output data**:
+```
+`# run predcit  `
 
-The probability of input sequences as pathogen.
+`python DCiPatho.py`
+```
+
+
+
+## Basic demo for training on mini-RefSeq dataset
+
+You can set the parameter of training and model in DCiPatho_config.py file. Then you can train the DCiPatho model and evaluate it on mini-RefSeq dataset by running:
+
+``````python
+`python DCiPatho_main.py`
+``````
 
